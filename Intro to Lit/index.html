@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro to Lit Step 1/8</title>
-</head>
-<body>
-    import {LitElement, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
-
-@customElement('my-element')
-export class MyElement extends LitElement {
-  @property()
-  version = 'COMPLETED';
-
-  render() {
-    return html`
-    <p>Welcome to the Lit tutorial!</p>
-    <p>This is the ${this.version} code.</p>
-    `;
-  }
-}
-
-
-</body>
+<html>
+  <head>
+    <script type="module" src="my-element.js"></script>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5em;
+        padding-left: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <my-element></my-element>
+  </body>
 </html>
